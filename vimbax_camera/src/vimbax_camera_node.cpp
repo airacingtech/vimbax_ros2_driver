@@ -1670,13 +1670,14 @@ bool VimbaXCameraNode::is_streaming()
 
 std::string VimbaXCameraNode::get_node_name()
 {
-  auto const pidString = [] {
-#ifdef __unix__
-      return std::to_string(getpid());
-#endif
-    }();
+//   auto const pidString = [] {
+// #ifdef __unix__
+//       return std::to_string(getpid());
+// #endif
+//     }();
 
-  return "vimbax_camera_" + pidString;
+//   return "vimbax_camera_" + pidString;
+  return "vimbax_camera";
 }
 
 VimbaXCameraNode::NodeBaseInterface::SharedPtr VimbaXCameraNode::get_node_base_interface() const
